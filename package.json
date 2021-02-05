@@ -1,0 +1,19 @@
+{
+  "name": "sharex-uploader",
+  "version": "1.0.0",
+  "description": "Basic ShareX uploader with a Discord bot to configure it.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spencer-0003/ShareX-Uploader.git"
+  },
+  "author": "Spencer-0003",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Spencer-0003/ShareX-Uploader/issues"
+  },
+  "homepage": "https://github.com/Spencer-0003/ShareX-Uploader#readme"
+}
