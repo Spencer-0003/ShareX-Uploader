@@ -2,6 +2,10 @@
     This repository is sponsored by https://sperg.club
 */
 
+// Load .env
+
+require("dotenv").config();
+
 // Define important variables.
 
 const malformedImageTypes = ["bin_", "net_"]; // VMProtected programs (maybe other obfuscated programs too?) and battle.net launcher.
