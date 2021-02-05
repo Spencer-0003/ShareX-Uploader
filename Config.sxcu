@@ -1,0 +1,13 @@
+﻿{
+  "Version": "13.4.0",
+  "Name": "Config",
+  "DestinationType": "ImageUploader, FileUploader",
+  "RequestMethod": "POST",
+  "RequestURL": "http://127.0.0.1:3000/upload",
+  "Body": "MultipartFormData",
+  "Arguments": {
+    "key": "change_me"
+  },
+  "FileFormName": "sharex",
+  "URL": "http://127.0.0.1:3000/uploads/$json:url$"
+}
