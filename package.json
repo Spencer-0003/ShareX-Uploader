@@ -1,7 +1,7 @@
 {
   "name": "sharex-uploader",
   "version": "1.0.0",
-  "description": "Basic ShareX uploader with a Discord bot to configure it.",
+  "description": "Basic ShareX uploader",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/Spencer-0003/ShareX-Uploader/issues"
   },
-  "homepage": "https://github.com/Spencer-0003/ShareX-Uploader#readme"
+  "homepage": "https://github.com/Spencer-0003/ShareX-Uploader#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "pug": "^3.0.0"
+  }
 }
