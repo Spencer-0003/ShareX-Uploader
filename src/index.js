@@ -93,7 +93,7 @@ app.get("/uploads/:file", function(req, res) {
     return res.render("UnknownImage");
 });
 
-app.post("/upload", (req, res) => {
+app.post("/upload", async (req, res) => {
     let key = req.body.key;
     let file = req.files.sharex;
 
@@ -105,7 +105,18 @@ app.post("/upload", (req, res) => {
         return res.json({ message: "File not found.", type: "error" });
     };
 
+    let fileDots = file.name.split(".");
+    let fileType = fileDots[1];
 
+    if (malformedImageTypes.includes(fileType)) {
+        fileType = "png"; // Jpg works too, I guess.
+    };
+
+    let fileName = `${randomString(16)}.${fileType}`; // Create randomised file name.
+
+    await file.mv("./uploads/" + fileName);
+
+    return res.json({ success: true, url: fileName });
 });
 
 app.listen(process.env.PORT || 3000);
