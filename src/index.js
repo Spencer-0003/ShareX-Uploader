@@ -9,7 +9,7 @@ const rawFilesToSend = ["mp4", "gif", "rar", "txt", "zip", "7z"];
 
 const embedTitle = "Title";
 const embedDescription = "Description";
-const uploaderKey = "key"; // Change this to your key!
+const uploaderKey = "change_me"; // Change this to your key!
 
 // Define functions
 
