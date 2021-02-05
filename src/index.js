@@ -2,6 +2,11 @@
     This repository is sponsored by https://sperg.club
 */
 
+const malformedImageTypes = ["bin_", "net_"]; // VMProtected programs and battle.net launcher.
+const rawFilesToSend = ["mp4", "gif", "rar", "txt", "zip", "7z"];
+const embedTitle = "Title";
+const embedDescription = "Description";
+
 const express = require("express");
 const fs = require("fs");
 
@@ -28,7 +33,20 @@ app.get("/raw/:file", (req, res) => {
     return res.render("UnknownImage");
 });
 
+app.get("/uploads/:file", function(req, res) {
+    let file = req.params.file;
+    let fileDots = file.split(".");
+    let fileType = fileDots[1];
 
+    if (fs.existsSync("./src/uploads/" + file)) {
+        if (rawFilesToSend.includes(fileType)) {
+            return res.sendFile(__dirname + "/uploads/" + req.params.file);
+        };
 
+        return res.render("ImageTemplate", { image: file, title: embedTitle, description: embedDescription });
+    };
+
+    return res.render("UnknownImage");
+});
 
 app.listen(process.env.PORT || 3000);
