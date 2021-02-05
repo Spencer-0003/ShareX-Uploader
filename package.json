@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/Spencer-0003/ShareX-Uploader#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-fileupload": "^1.2.1",
+    "express-rate-limit": "^5.2.3",
+    "helmet": "^4.4.1",
     "pug": "^3.0.0"
   }
 }
