@@ -114,7 +114,7 @@ app.post("/upload", async (req, res) => {
 
     let fileName = `${randomString(16)}.${fileType}`; // Create randomised file name.
 
-    await file.mv("./uploads/" + fileName);
+    await file.mv("./src/uploads/" + fileName);
 
     return res.json({ success: true, url: fileName });
 });
