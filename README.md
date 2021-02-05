@@ -18,5 +18,7 @@ This is a little guide to set up the shareX uploader.
 7. Do the same with `.src/views/UnknownImage`
 8. Open `Config.sxcu` to save the config.
 9. Open `src/index.js` and change `key` to your key.
-9. Run the bot: `node .`
+10. Change `embedTitle` to your chosen title.
+11. Change `embedDescription` to your chosen description.
+12. Run the bot: `node .`
    - Using pm2: `pm2 start src/index.js`
